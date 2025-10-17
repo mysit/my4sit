@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Страница с ссылками</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-image: url(https://avatars.mds.yandex.net/i?id=bc7ecf8bd67d437fa6d02ad74c6c7de61be8d29d-3855076-images-thumbs&n=13);
+        background-repeat: repeat;
+        background-size: contain;
+        font-family: 'Lobster', cursive;
+      }
+      
+      .container-custom {
+        background-color: #8ad0ff;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      
+      .table-custom {
+        background-color: #fff;
+      }
+      
+      .table-custom .chet {
+        background: #1d32a7;
+      }
+      
+      /* Мобильные стили */
+      @media (max-width: 767.98px) {
+        .mobile-order-1 {
+          order: 1;
+        }
+        .mobile-order-2 {
+          order: 2;
+        }
+        .mobile-order-3 {
+          order: 3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="bg-primary">
+      <div class="container">
+        <div class="row align-items-center py-3">
+          <div class="col-md-2 text-center text-md-start">
+            <img src="https://i.pinimg.com/736x/8c/ea/7a/8cea7aeb3b2306f36067c5822482d232.jpg" 
+                 alt="Логотип" class="img-fluid rounded-circle" style="max-width: 100px;">
+          </div>
+          <div class="col-md-4 text-center text-md-start">
+            <h1 class="text-white h4 mb-0">сайт крутых</h1>
+          </div>
+          <div class="col-md-6">
+            <nav class="navbar navbar-expand-md p-0">
+              <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                      aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-md-auto flex-column flex-md-row text-center">
+                  <a class="nav-link text-white" href="https://www.rollingmoto.ru/catalog/mototekhnika/mototsikly/?ysclid=mfrxkr1k7g516233593">сайт с мотоциклами</a>
+                  <a class="nav-link text-white" href="https://khoroshiykot.ru/">котофорум</a>
+                  <a class="nav-link text-white" href="https://m-ch-s.ru/kollekciya/katalog?ysclid=mfrxm9t4pm266855958">сайт со скелеами</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container container-custom my-4">
+      <div class="row flex-column">
+        <!-- Список ссылок (в HTML потоке первый) -->
+        <div class="col-12 mobile-order-2">
+          <ul class="list-group mb-4">
+            <li class="list-group-item"><a href="http://kubsu.ru">Главная страница сайта КубГУ</a></li>
+            <li class="list-group-item"><a href="https://kubsu.ru/">Главная страница сайта КубГУ с шифрованием</a></li>
+            <li class="list-group-item">
+              <a href="kubsu.ru" title="изображение-ссылка некоторого животного">
+                <img src="https://avatars.mds.yandex.net/i?id=5adb21e6b845b5eb249526dd0f988663_l-9268591-images-thumbs&n=13" 
+                     alt="изображение-ссылка некоторого животного" class="img-fluid" style="max-width: 100px;">
+              </a>
+            </li>
+            <li class="list-group-item"><a href="index.html">Cокращенную ссылка на внутреннюю страницу</a></li>
+            <li class="list-group-item"><a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+            <li class="list-group-item"><a href="#gogl">Ссылка на фрагмент текущей страницы</a></li>
+            <li class="list-group-item"><a href="https://google.com/?param1=1&param2=2&param3=3" id="gogl" title="gogl">gogl</a></li>
+            <li class="list-group-item"><a href="https://google.com/?id=3">Ссылка c id в URL</a></li>
+            <li class="list-group-item"><a href="./catalog.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+            <li class="list-group-item"><a href="./about.html">Ссылка на страницу в каталоге about</a></li>
+            <li class="list-group-item"><a href="../level1.html">Ссылка на страницу в каталоге уровнем выше</a></li>
+            <li class="list-group-item"><a href="../../level2.html">Ссылка на страницу в каталоге двумя уровнями выше</a></li>
+            <li class="list-group-item">
+              Сайт КубГу 
+              <a href="https://www.kubsu.ru">ссылка</a>
+            </li>
+            <li class="list-group-item"><a href="https://www.kubsu.ru/ai/">Ссылка на фрагмент стороннего сайта</a></li>
+            <li class="list-group-item">
+              Ссылки из прямоугольных и круглых областей картинки
+              <img src="https://avatars.mds.yandex.net/i?id=5adb21e6b845b5eb249526dd0f988663_l-9268591-images-thumbs&n=13" 
+                   class="img-fluid d-block mt-2" style="max-width: 100px;" usemap="#dog">
+              <map name="dog">
+                <area shape="rect" coords="0,0,251,274" href="https://www.kubsu.ru">
+                <area shape="circle" coords="400,64,64" href="https://www.kubsu.ru">
+              </map>
+            </li>
+            <li class="list-group-item"><a href="">Ссылка с пустым href</a></li>
+            <li class="list-group-item"><a>Ссылка без href</a></li>
+            <li class="list-group-item"><a href="index.html" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+            <li class="list-group-item"><a href="index.html">Ссылка, запрещенная для индексации поисковиками</a></li>
+            <li class="list-group-item">
+              Нумерованный список ссылок
+              <ol class="mt-2">
+                <li><a href="https://www.kubsu.ru">1</a></li>
+                <li><a href="https://www.kubsu.ru">2</a></li>
+                <li><a href="https://www.kubsu.ru">3</a></li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Таблица (в HTML потоке вторая) -->
+        <div class="col-12 mobile-order-1 mb-4">
+          <div class="table-responsive">
+            <table class="table table-bordered table-custom text-center">
+              <thead>
+                <tr>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.1</td>
+                  <td>2.1</td>
+                  <td>3.1</td>
+                  <td>4.1</td>
+                </tr>
+                <tr class="chet">
+                  <td>1.1</td>
+                  <td>2.1</td>
+                  <td>3.1</td>
+                  <td>4.1</td>
+                </tr>
+                <tr>
+                  <td>1.1</td>
+                  <td>2.1</td>
+                  <td>3.1</td>
+                  <td>4.1</td>
+                </tr>
+                <tr class="chet">
+                  <td>1.1</td>
+                  <td>2.1</td>
+                  <td>3.1</td>
+                  <td>4.1</td>
+                </tr>
+                <tr>
+                  <td>1.1</td>
+                  <td>2.1</td>
+                  <td>3.1</td>
+                  <td>4.1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Форма -->
+        <div class="col-12 mobile-order-3">
+          <form action="" method="POST" class="bg-light p-4 rounded">
+            <h3 class="mb-3">Форма</h3>
+            
+            <div class="mb-3">
+              <label class="form-label">Ваше ФИО:</label>
+              <input type="text" class="form-control" name="field-name" placeholder="Введите ФИО">
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Телефон:</label>
+              <input type="tel" class="form-control" name="field-tel" placeholder="Введите номер телефона">
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">E-mail:</label>
+              <input type="email" class="form-control" name="field-email" placeholder="Введите email">
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Дата рождения:</label>
+              <input type="date" class="form-control" name="field-date" placeholder="Введите дату рождения">
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Пол:</label>
+              <div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radio-group-1" id="male" value="Значение1">
+                  <label class="form-check-label" for="male">Муж</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radio-group-1" id="female" value="Значение2">
+                  <label class="form-check-label" for="female">Жен</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Любимый язык программирования:</label>
+              <select class="form-select" name="listbox" multiple>
+                <option value="Значение1" selected>Pascal</option>
+                <option value="Значение6" selected>Python</option>
+                <option value="Значение3" selected>C++</option>
+                <option value="Значение7" selected>Java</option>
+                <option value="Значение2" selected>C</option>
+              </select>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Биография:</label>
+              <textarea class="form-control" name="field-name-2" rows="4">Расскажите о себе</textarea>
+            </div>
+            
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" checked name="check-1" id="check1">
+              <label class="form-check-label" for="check1">С информацией ознакомлен(а)</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-primary text-white text-center py-4">
+      <p class="mb-0">(c) Дмитрий Крючков ПМ21/2</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
