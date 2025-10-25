@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Страница с сылками</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(https://avatars.mds.yandex.net/i?id=bc7ecf8bd67d437fa6d02ad74c6c7de61be8d29d-3855076-images-thumbs&n=13);
+            background-repeat: repeat;
+            background-size: contain;
+        }
+
+        .flex-table {
+            background-color: #fff;
+            border: 1px solid grey;
+            min-width: 400px;
+        }
+
+        .flex-cell {
+            border: 1px solid grey;
+            padding: 8px;
+        }
+
+        .flex-header {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+
+        .chet {
+            background: #1d32a7;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary">
+        <div class="container-fluid">
+            <div class="row align-items-center py-3 px-4">
+                <div class="col-auto">
+                    <img src="https://i.pinimg.com/736x/8c/ea/7a/8cea7aeb3b2306f36067c5822482d232.jpg" alt="" class="img-fluid" style="width: 80px; height: 80px;">
+                </div>
+                <div class="col">
+                    <h1 class="h4 mb-0 text-white">сайт крутых</h1>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                    <nav class="d-flex gap-4">
+                        <a class="text-white text-decoration-none" href="https://www.rollingmoto.ru/catalog/mototekhnika/mototsikly/?ysclid=mfrxkr1k7g516233593">сайт с мотоциклами</a>
+                        <a class="text-white text-decoration-none" href="https://khoroshiykot.ru/">котофорум</a>
+                        <a class="text-white text-decoration-none" href="https://m-ch-s.ru/kollekciya/katalog?ysclid=mfrxm9t4pm266855958">сайт со скелеами</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="d-md-none pb-2">
+                <nav class="d-flex flex-column text-center">
+                    <a class="text-white text-decoration-none py-1" href="https://www.rollingmoto.ru/catalog/mototekhnika/mototsikly/?ysclid=mfrxkr1k7g516233593">сайт с мотоциклами</a>
+                    <a class="text-white text-decoration-none py-1" href="https://khoroshiykot.ru/">котофорум</a>
+                    <a class="text-white text-decoration-none py-1" href="https://m-ch-s.ru/kollekciya/katalog?ysclid=mfrxm9t4pm266855958">сайт со скелеами</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-4 bg-secondary">
+        <div class="container" style="max-width: 960px;">
+            <div class="d-flex flex-column">
+                <!-- Таблица - на мобильных первая, на ПК вторая -->
+                <div class="order-1 order-md-2 mb-4">
+                    <table class="table table-success table-striped border border-primary">
+
+<tr class="border border-3">  
+<th class="border border-3">1</th>  
+<th class="border border-3">2</th>  
+<th class="border border-3">3</th>
+<th class="border border-3">3</th>  
+</tr>  
+<tr class="border border-3">  
+<th colspan = 2 class="border border-3">1</th>  
+<th class="border border-3">2</th>  
+<th class="border border-3">3</th>
+</tr>
+<tr class="border border-3">  
+<th class="border border-3">1</th>  
+<th class="border border-3">2</th>  
+<th rowspan = 2 class="border border-3">3</th>
+<th>3</th>  
+</tr>
+<tr>  
+<th  class="border border-3">1</th>  
+<th class="border border-3">2</th>  
+<th class="border border-3">3</th>
+</tr>
+</table>  
+                </div>
+
+                <!-- Список ссылок - на мобильных второй, на ПК первый -->
+                <div class="order-2 order-md-1 mb-4 bg-light p-3">
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="http://kubsu.ru" class="text-decoration-none">Главная страница сайта КубГУ</a></li>
+                        <li class="mb-2"><a href="https://kubsu.ru/" class="text-decoration-none">Главная страница сайта КубГУ с шифрованием</a></li>
+                        <li class="mb-2">
+                            <a href="kubsu.ru" title="изображение-ссылка некоторого животного" class="text-decoration-none">
+                                <img src="https://avatars.mds.yandex.net/i?id=5adb21e6b845b5eb249526dd0f988663_l-9268591-images-thumbs&n=13" alt="изображение-ссылка некоторого животного" class="img-fluid" style="width: 10%;">
+                            </a>
+                        </li>
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none">Cокращенную ссылка на внутреннюю страницу</a></li>
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none">Сокращенная ссылка на главную страницу</a></li>
+                        <li class="mb-2"><a href="#gogl" class="text-decoration-none">Ссылка на фрагмент текущей страницы</a></li>
+                        <li class="mb-2"><a href="https://google.com/?param1=1&param2=2&param3=3" id="gogl" title="gogl" class="text-decoration-none">gogl</a></li>
+                        <li class="mb-2"><a href="https://google.com/?id=3" class="text-decoration-none">Ссылка c id в URL</a></li>
+                        <li class="mb-2"><a href="./catalog.html" class="text-decoration-none"> Относительная ссылка на страницу в текущем каталоге</a></li>
+                        <li class="mb-2"><a href="./about.html" class="text-decoration-none"> Ссылка на страницу в каталоге about</a></li>
+                        <li class="mb-2"><a href="../level1.html" class="text-decoration-none"> Ссылка на страницу в каталоге уровнем выше</a></li>
+                        <li class="mb-2"><a href="../../level2.html" class="text-decoration-none"> Ссылка на страницу в каталоге двумя уровнями выше</a></li>
+                        <li class="mb-2">
+                            Сайт КубГу 
+                            <a href="https://www.kubsu.ru" class="text-decoration-none">ссылка</a>
+                        </li>
+                        <li class="mb-2"><a href="https://www.kubsu.ru/ai/" class="text-decoration-none">Ссылка на фрагмент стороннего сайта</a></li>
+                        <li class="mb-2">Ссылки из прямоугольных и круглых областей картинки</li>
+                        <img src="https://avatars.mds.yandex.net/i?id=5adb21e6b845b5eb249526dd0f988663_l-9268591-images-thumbs&n=13" class="img-fluid mb-2" style="width: 10%;" usemap="#dog">
+                        <map name="dog">
+                            <area shape="rect" coords="0,0,251,274" href="https://www.kubsu.ru">
+                            <area shape="circle" coords="400,64,64" href="https://www.kubsu.ru">
+                        </map>
+                        <li class="mb-2"><a href="" class="text-decoration-none"> Ссылка с пустым href</a></li>
+                        <li class="mb-2"><a class="text-decoration-none"> Ссылка без href</a></li>
+                        <li class="mb-2"><a href="index.html" rel="nofollow" class="text-decoration-none"> Ссылка, по которой запрещен переход поисковикам</a></li>	
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none"> Ссылка, запрещенная для индексации поисковиками</a></li>
+                        <li class="mb-2">
+                            <ol>
+                                Нумерованный список ссылок
+                                <li><a href="https://www.kubsu.ru" title="1" class="text-decoration-none">1</a></li>
+                                <li><a href="https://www.kubsu.ru" title="2" class="text-decoration-none">2</a></li>
+                                <li><a href="https://www.kubsu.ru" title="3" class="text-decoration-none">3</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Форма - всегда третья -->
+                <div class="order-3 mb-4">
+                    <form action="" method="POST">
+                        <h3 class="mb-3">Форма</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Ваше ФИО:</label>
+                            <input name="field-name" placeholder="Введите ФИО" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Телефон:</label>
+                            <input name="field-tel" placeholder="Введите номер телефона" type="tel" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">E-mail:</label>
+                            <input name="field-email" placeholder="Введите email" type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Дата рождения:</label>
+                            <input name="field-date" placeholder="Введите дату рождения" type="date" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Пол:</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="radio-group-1" value="Значение1">
+                                    <label class="form-check-label">Муж</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="radio-group-1" value="Значение2">
+                                    <label class="form-check-label">Жен</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Любимый язык программирования:</label>
+                            <select name="listbox[]" multiple="multiple" class="form-select">
+                                <option value="Значение1" selected="selected">Pascal</option>
+                                <option value="Значение6">Python</option>
+                                <option value="Значение3">C++</option>
+                                <option value="Значение7">Java</option>
+                                <option value="Значение2">C</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Биография:</label>
+                            <textarea name="field-name-2" class="form-control">Расскажите о себе</textarea>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" checked="checked" name="check-1" class="form-check-input">
+                            <label class="form-check-label">С информацией ознакомлен(а)</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-primary text-white py-3">
+        <div class="px-3 py-3">
+            <p class="mb-0">(c) Дмитрий Крючков ПМ21/2</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
